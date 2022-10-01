@@ -9,5 +9,5 @@ import org.springframework.transaction.annotation.EnableTransactionManagement
 class BoilerplateApplication
 
 fun main(args: Array<String>) {
-	runApplication<BoilerplateApplication>(*args)
+    runApplication<BoilerplateApplication>(*args)
 }
