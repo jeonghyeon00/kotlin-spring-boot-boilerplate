@@ -42,7 +42,6 @@ class JwtTokenProvider(private val userDetailsService: UserDetailsService) {
         return UsernamePasswordAuthenticationToken(userDetails, "", userDetails.authorities)
     }
 
-    // 토큰에서 회원 정보 추출
     fun getUserPk(token: String): String {
         return Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).body.subject
     }
