@@ -3,14 +3,14 @@ server:
 
 spring:
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://localhost:3306/firstDB # db Url
-      username: root # db username
-      password: rootroot #db password
-    url: jdbc:mysql://localhost:3306/db
+    url: jdbc:mysql://localhost:3306/firstDB
+    username: root
+    password: rootroot
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     database: mysql
     show-sql: true
     hibernate:
       ddl-auto: update
+    open-in-view: false

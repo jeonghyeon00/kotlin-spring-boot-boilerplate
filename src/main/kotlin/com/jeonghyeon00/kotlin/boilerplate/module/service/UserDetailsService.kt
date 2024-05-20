@@ -12,7 +12,8 @@ import org.springframework.web.client.HttpServerErrorException
 import java.util.Collections
 
 @Service
-class UserDetailService(private val userRepository: UserRepository) : UserDetailsService {
+class UserDetailsService(private val userRepository: UserRepository) :
+    UserDetailsService {
     override fun loadUserByUsername(username: String): UserDetails {
         val user = userRepository.findById(username).orElseThrow { HttpServerErrorException(HttpStatus.NOT_FOUND) }
         val grantedAuthority: GrantedAuthority = SimpleGrantedAuthority(user.authority.toString())

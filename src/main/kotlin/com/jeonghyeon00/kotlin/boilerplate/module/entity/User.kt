@@ -1,11 +1,7 @@
 package com.jeonghyeon00.kotlin.boilerplate.module.entity
 
 import com.jeonghyeon00.kotlin.boilerplate.module.constants.Authority
-import javax.persistence.Entity
-import javax.persistence.EnumType
-import javax.persistence.Enumerated
-import javax.persistence.Id
-import javax.persistence.Table
+import jakarta.persistence.*
 
 @Entity
 @Table(name = "users")
